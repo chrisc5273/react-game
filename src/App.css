@@ -1,38 +1,128 @@
 .App {
+  height: 100vh;
   text-align: center;
+  background-size: cover;
+ 
+}
+.PokemonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  margin-bottom: 0px;
+  background-position: bottom;
+  background-image: url("./images/homeScreen.jpg");
+}
+.homeScreen {
+  height: 100vh;
+  width: 100vw;
+  margin-bottom: 0px;
+  background-image: url("./images/homeScreen.jpg");
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  justify-content: center;
+  align-items: center;  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.start {
+  position: fixed;
+  background-color: orangered;
+  margin-top: 100px;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.glitch-window {
+  font: 700 4em/1 "Oswald", sans-serif;
+  letter-spacing: 0;
+  padding: .25em 0 .325em;
+  display: block;
+  margin: 0 auto;
+  text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+cursor: pointer;
+border: none;
+  background: url(https://i.ibb.co/RDTnNrT/animated-text-fill.png) repeat-y; 
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  animation: aitf 50s linear infinite; /* Use animation with @keyframes */
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+.glitch-window:hover{
+  background: none ;
+  -webkit-text-fill-color: hsl(0, 0%, 0%);
+  box-shadow: 10px 10px 10px 0px rgba(255, 60, 0, 0.7);
+  border-radius: 50px;
+  border: solid black;
+}
+/* Define the animation @keyframes */
+@keyframes aitf {
+  0% {
+    background-position: 0 50%;
+  }
+  100% {
+    background-position: 100% 50%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url("./images/homeScreen.jpg");
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: lightgrey;
+  height: 40vh;
+  width: 20vw;
+  border-radius: 10px;   
+}
+
+#pokemonName {
+  cursor: pointer;
+  height: 2rem;
   color: white;
+  font-style: italic;
+  text-align: center;
+  width: 20rem;
+  font-size: large;
+  border-radius: 2px;
+  background: linear-gradient(180deg, rgb(248, 166, 13), hsl(0, 100%, 91%));
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+
+
+#leftmost-img {
+  position: absolute;
+  left: 0; 
+  bottom: 0;
+  height: 300px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#rightmost-img {
+  position: absolute;
+  right: 0; 
+  bottom: 0;
+  height: 250px;
+}
+
+#fetchBtn {
+  height: 40px;
+  background-color: #080808;
+  padding: 6px 28px;
+  color: red;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#fetchBtn:hover {
+  background: linear-gradient(180deg, lightblue, lightcoral);
+  transition: all 2.5s ease-out;
 }

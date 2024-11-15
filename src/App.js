@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { useState } from 'react';
+import PokemonDisplay from './components/pokemonDisplay';
+import HomeScreen from './components/homeScreen';
 
 function App() {
+  const [showPokemonDisplay, setShowPokemonDisplay] = useState(false); // State to control visibility
+  const[background, setBackground] = useState('home');
+  // Function to handle button click
+  const handleStartGame = () => {
+    setShowPokemonDisplay(true);
+  };
+
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       
+      {/* Pass the function to handle button click */}
+      {!showPokemonDisplay ? (
+        <HomeScreen onStartGame={handleStartGame} />
+      ) : (
+        <PokemonDisplay />
+      )}
     </div>
-  );
+  )
 }
 
 export default App;
