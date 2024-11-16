@@ -17,6 +17,20 @@
   background-position: bottom;
   background-image: url("./images/homeScreen.jpg");
 }
+
+.CharacterContainer {
+  display: grid;
+  align-items: center;
+  height: auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr  1fr 1fr 1fr 1fr 1fr;
+  row-gap: 15px;
+}
+.Character{
+  background: linear-gradient(45deg, rgb(252, 60, 60), rgb(255, 251, 0));
+  border: solid 1px black;
+  
+  height: 140px;width: 160px;;
+}
 .homeScreen {
   height: 100vh;
   width: 100vw;
@@ -65,30 +79,6 @@ border: none;
   100% {
     background-position: 100% 50%;
   }
-}
-
-.CharacterContainer {
-  display: grid;
-  flex-direction: column;
-  align-items: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr  1fr 1fr 1fr 1fr 1fr;
-}
-.Character{
-  padding: 10px;
-  border: solid 1px black;
-  height: 100px;width: 150px;;
-}
-#pokemonName {
-  cursor: pointer;
-  height: 2rem;
-  color: white;
-  font-style: italic;
-  text-align: center;
-  width: 20rem;
-  font-size: large;
-  border-radius: 2px;
-  background: linear-gradient(180deg, rgb(248, 166, 13), hsl(0, 100%, 91%));
-  margin-bottom: 20px;
 }
 
 
