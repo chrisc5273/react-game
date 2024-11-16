@@ -21,15 +21,27 @@
 .CharacterContainer {
   display: grid;
   align-items: center;
-  height: auto;
+  background-color: aqua;
+  height: 500px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr  1fr 1fr 1fr 1fr 1fr;
   row-gap: 15px;
 }
 .Character{
   background: linear-gradient(45deg, rgb(252, 60, 60), rgb(255, 251, 0));
   border: solid 1px black;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+width: 150px;height: 200px;
+}
+.Character.clicked{
+box-shadow: 0px 6px 30px 5px red;
+transform: scale(3.2);
   
-  height: 140px;width: 160px;;
+transform-origin: center;
+  background-image: url(./images/pokemonCardBasic.png);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+
 }
 .homeScreen {
   height: 100vh;
