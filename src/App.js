@@ -6,7 +6,7 @@ import HomeScreen from './components/homeScreen';
 
 function App() {
   const [showPokemonDisplay, setShowPokemonDisplay] = useState(false); // State to control visibility
-  const[background, setBackground] = useState('home');
+
   // Function to handle button click
   const handleStartGame = () => {
     setShowPokemonDisplay(true);

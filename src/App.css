@@ -6,6 +6,7 @@
 }
 .PokemonContainer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-size: cover;
@@ -30,12 +31,6 @@
   align-items: center;  
 }
 
-.start {
-  position: fixed;
-  background-color: orangered;
-  margin-top: 100px;
-  cursor: pointer;
-}
 
 .glitch-window {
   font: 700 4em/1 "Oswald", sans-serif;
@@ -72,18 +67,17 @@ border: none;
   }
 }
 
-.container {
-  display: flex;
+.CharacterContainer {
+  display: grid;
   flex-direction: column;
   align-items: center;
-  background-image: url("./images/homeScreen.jpg");
-  justify-content: center;
-  background-color: lightgrey;
-  height: 40vh;
-  width: 20vw;
-  border-radius: 10px;   
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr  1fr 1fr 1fr 1fr 1fr;
 }
-
+.Character{
+  padding: 10px;
+  border: solid 1px black;
+  height: 100px;width: 150px;;
+}
 #pokemonName {
   cursor: pointer;
   height: 2rem;
@@ -113,16 +107,4 @@ border: none;
   height: 250px;
 }
 
-#fetchBtn {
-  height: 40px;
-  background-color: #080808;
-  padding: 6px 28px;
-  color: red;
-  font-weight: bold;
-  font-size: 16px;
-}
 
-#fetchBtn:hover {
-  background: linear-gradient(180deg, lightblue, lightcoral);
-  transition: all 2.5s ease-out;
-}
